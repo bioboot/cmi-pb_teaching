@@ -1,0 +1,50 @@
+---
+title: ""
+---
+
+## Overview
+
+::: {.grid}
+
+::: {.g-col-7}
+
+The [**C**ommunity for **M**odeling **P**ertussis **B**oost (**CMI-PB**)](https://www.cmi-pb.org/) project provides the scientific community with comprehensive, high-quality, and freely accessible resources related to Pertussis booster vaccination. 
+
+:::
+
+::: {.g-col-5}
+![](https://www.cmi-pb.org/static/img/CMIPB.jpg)
+:::
+:::
+
+
+These resources, and associated [prediction challenges](), are geared towards engaging both experts and enthusiasts in developing and improving *computational models* of the immune response to vaccination.
+
+
+## Educational Resources
+Major resources to help you understand and make use of CMI-PB data include:
+
+- [Hands on introduction to using and accessing CMI-PB data]() 
+- [Background and biological information on Pertussis]()
+- [An annotated history of major Pertussis milestones]()
+- [First steps in modeling with CMI-PB data]()
+- [How to participate in the CMI-PB prediction challenge]()
+- [The CMI-PB solutions center]() 
+
+## Contact
+Much of this materiel was developed for graduate level instruction at UC San Diego. We would be happy to help you adapt and utilize this materiel for own purposes.
+
+Please contact [Barry](mailto:bjgrant@ucsd.edu) and/or [Bjoern](mailto:bpeters@lji.org). We would be delighted to hear from you. 
+
+This work is licensed under a Creative Commons License: [CC BY-NC](http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1) 
+
+::: {.callout-tip collapse="true" appearance="simple"}
+## About: CC BY-NC 4.0 
+This license requires that users give credit to the creator. It allows users to distribute, remix, adapt, and build upon the material in any medium or format, for noncommercial purposes.  
+
+[See the License Deed](http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1).
+:::
+
+
+First authored 2023-10-18.  
+Last updated `r Sys.Date()`.  
