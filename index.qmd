@@ -1,5 +1,6 @@
 ---
 title: ""
+engine: knitr
 ---
 
 ## Overview
@@ -8,7 +9,7 @@ title: ""
 
 ::: {.g-col-7}
 
-The [**C**ommunity for **M**odeling **P**ertussis **B**oost (**CMI-PB**)](https://www.cmi-pb.org/) project provides the scientific community with comprehensive, high-quality, and freely accessible resources related to Pertussis booster vaccination. 
+The [**C**ommunity for **M**odeling **P**ertussis **B**oost (**CMI-PB**)](https://www.cmi-pb.org/){target="_blank"} project provides the scientific community with comprehensive, high-quality, and freely accessible resources related to Pertussis booster vaccination. 
 
 :::
 
@@ -18,21 +19,22 @@ The [**C**ommunity for **M**odeling **P**ertussis **B**oost (**CMI-PB**)](https:
 :::
 
 
-These resources, and associated [prediction challenges](), are geared towards engaging both experts and enthusiasts in developing and improving *computational models* of the immune response to vaccination.
+These resources, and associated [prediction challenges](https://www.cmi-pb.org/blog/prediction-challenge-overview/){target="_blank"}, are geared towards engaging both experts and enthusiasts in developing and improving *computational models* of the immune response to vaccination.
 
 
 ## Educational Resources
 Major resources to help you understand and make use of CMI-PB data include:
 
-- [Hands on introduction to using and accessing CMI-PB data]() 
-- [Background and biological information on Pertussis]()
-- [An annotated history of major Pertussis milestones]()
-- [First steps in modeling with CMI-PB data]()
-- [How to participate in the CMI-PB prediction challenge]()
-- [The CMI-PB solutions center]() 
+- [Hands on introduction to using and accessing CMI-PB data](introduction/intro_to_cmi-pb.qmd){target="_blank"} 
+- [Background and biological information on Pertussis](background/intro_to_pertussis.qmd){target="_blank"}
+- [An annotated history of major Pertussis milestones](timeline/pertussis_timeline.html){target="_blank"}
+- [First steps in modeling with CMI-PB data](){target="_blank"}
+- [How to participate in the CMI-PB prediction challenge](https://www.cmi-pb.org/blog/prediction-challenge-overview/){.external target="_blank"}
+- [Lecture slides introducing CMI-PB]()
+- [The CMI-PB solutions center](https://discuss.cmi-pb.org){.external target="_blank"} 
 
 ## Contact
-Much of this materiel was developed for graduate level instruction at UC San Diego. We would be happy to help you adapt and utilize this materiel for own purposes.
+Much of this materiel was developed for graduate level instruction at UC San Diego. We would be happy to help you adapt and utilize this materiel for your own purposes.
 
 Please contact [Barry](mailto:bjgrant@ucsd.edu) and/or [Bjoern](mailto:bpeters@lji.org). We would be delighted to hear from you. 
 

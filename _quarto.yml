@@ -1,5 +1,9 @@
 project:
   type: website
+  output-dir: docs
+  resources:
+    - "/timeline/*"
+    - "/timeline/img/*"
 
 website:
   title: "Teaching Material"
@@ -9,27 +13,28 @@ website:
         text: Home
       - text: "Resources"
         menu:
-          - href: about.qmd
+          - href: introduction/intro_to_cmi-pb.qmd
             text: "Introducing CMI-PB Data"
-          - href: about.qmd
+          - href: background/intro_to_pertussis.qmd
             text: "Pertussis Background"
-          - href: about.qmd
+          - href: timeline/pertussis_timeline.html
             text: "Pertussis Timeline"
+            target: _blank
           - href: about.qmd
             text: "Modeling with CMI-PB data"
-          - href: about.qmd
+          - href: https://www.cmi-pb.org/blog/prediction-challenge-overview/
             text: "Prediction challange"
+            target: _blank
 
     right:
-      - href: about.qmd
+      - href: https://www.cmi-pb.org
         text: CMI-PB
+        target: _blank
       - icon: github
-        menu:
-          - text: Source Code
-            url:  https://code.com
-          - text: Report a Bug
-            url:  https://bugs.com
-            
+        href: https://github.com/bioboot/cmi-pb_teaching
+        target: _blank
+        aria-label: Teaching GitHub
+
 format:
   html:
     theme: cosmo
