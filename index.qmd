@@ -30,7 +30,7 @@ Major resources to help you understand and make use of CMI-PB data include:
 - [An annotated history of major Pertussis milestones](timeline/pertussis_timeline.html){target="_blank"}
 - [First steps in modeling with CMI-PB data](){target="_blank"}
 - [How to participate in the CMI-PB prediction challenge](https://www.cmi-pb.org/blog/prediction-challenge-overview/){.external target="_blank"}
-- [Lecture slides introducing CMI-PB]()
+- [Lecture slides introducing CMI-PB](slides/slides_class18_2update.pdf){target="_blank"}
 - [The CMI-PB solutions center](https://discuss.cmi-pb.org){.external target="_blank"} 
 
 ## Contact
