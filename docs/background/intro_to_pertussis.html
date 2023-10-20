@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Barry J. Grant">
+<meta name="author" content="Pramod Shinde">
+<meta name="author" content="Shelby Orfield">
+<meta name="author" content="Mari Kojima">
+<meta name="author" content="Steven Kleinstein">
+<meta name="author" content="Bjoern Peters">
+
+<title>Teaching Material - Introduction to Pertussis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Teaching Material</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../introduction/intro_to_cmi-pb.html" rel="" target="">
+ <span class="dropdown-text">Introducing CMI-PB Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../background/intro_to_pertussis.html" rel="" target="">
+ <span class="dropdown-text">Pertussis Background</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../timeline/pertussis_timeline.html" rel="" target="_blank">
+ <span class="dropdown-text">Pertussis Timeline</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about.html" rel="" target="">
+ <span class="dropdown-text">Modeling with CMI-PB data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.cmi-pb.org/blog/prediction-challenge-overview/" rel="" target="_blank">
+ <span class="dropdown-text">Prediction challange</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.cmi-pb.org" rel="" target="_blank">
+ <span class="menu-text">CMI-PB</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bioboot/cmi-pb_teaching" rel="" target="_blank"><i class="bi bi-github" role="img" aria-label="Teaching GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sections</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#disease-pathogenesis" id="toc-disease-pathogenesis" class="nav-link" data-scroll-target="#disease-pathogenesis">Disease pathogenesis</a>
+  <ul class="collapse">
+  <li><a href="#disease-progression" id="toc-disease-progression" class="nav-link" data-scroll-target="#disease-progression">Disease progression</a></li>
+  </ul></li>
+  <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history">History</a></li>
+  <li><a href="#pertussis-vaccines" id="toc-pertussis-vaccines" class="nav-link" data-scroll-target="#pertussis-vaccines">Pertussis vaccines</a>
+  <ul class="collapse">
+  <li><a href="#the-switch-to-acellular-pertussis-vaccines" id="toc-the-switch-to-acellular-pertussis-vaccines" class="nav-link" data-scroll-target="#the-switch-to-acellular-pertussis-vaccines">The switch to acellular pertussis vaccines</a></li>
+  <li><a href="#ap-vaccine-composition" id="toc-ap-vaccine-composition" class="nav-link" data-scroll-target="#ap-vaccine-composition">aP vaccine composition</a></li>
+  </ul></li>
+  <li><a href="#the-resurgence-of-pertussis-cases" id="toc-the-resurgence-of-pertussis-cases" class="nav-link" data-scroll-target="#the-resurgence-of-pertussis-cases">The resurgence of pertussis cases</a>
+  <ul class="collapse">
+  <li><a href="#the-differences-in-immune-responses-ap-vs.-wp-priming" id="toc-the-differences-in-immune-responses-ap-vs.-wp-priming" class="nav-link" data-scroll-target="#the-differences-in-immune-responses-ap-vs.-wp-priming">The differences in immune responses: aP vs.&nbsp;wP priming</a></li>
+  </ul></li>
+  <li><a href="#next-steps-in-the-era-of-systems-vaccinology" id="toc-next-steps-in-the-era-of-systems-vaccinology" class="nav-link" data-scroll-target="#next-steps-in-the-era-of-systems-vaccinology">Next steps in the era of systems vaccinology</a>
+  <ul class="collapse">
+  <li><a href="#cmi-pb-project" id="toc-cmi-pb-project" class="nav-link" data-scroll-target="#cmi-pb-project">CMI-PB project</a></li>
+  <li><a href="#learning-more-about-cmi-pb" id="toc-learning-more-about-cmi-pb" class="nav-link" data-scroll-target="#learning-more-about-cmi-pb">Learning more about CMI-PB</a></li>
+  </ul></li>
+  <li><a href="#selected-references" id="toc-selected-references" class="nav-link" data-scroll-target="#selected-references">Selected References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to Pertussis</h1>
+<p class="subtitle lead">Educational material for the CMI-PB project</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Barry J. Grant <a href="https://orcid.org/0000-0002-2215-4196" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of California, San Diego
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    <p class="author">Pramod Shinde </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            La Jolla Institute for Immunology
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    <p class="author">Shelby Orfield </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            La Jolla Institute for Immunology
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    <p class="author">Mari Kojima </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            La Jolla Institute for Immunology
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    <p class="author">Steven Kleinstein <a href="https://orcid.org/0000-0003-4957-1544" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Yale University
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    <p class="author">Bjoern Peters <a href="https://orcid.org/0000-0002-8457-6693" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of California, San Diego
+          </p>
+        <p class="affiliation">
+            La Jolla Institute for Immunology
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Pertussis, or whooping cough, is a highly contagious lung infection caused by the bacteria <em>Bordetella pertussis</em>. This endemic disease is one of the leading causes of vaccine-preventable deaths worldwide with an estimated 16 million cases and 200,000 associated infant deaths annually <span class="citation" data-cites="black2010">(<a href="#ref-black2010" role="doc-biblioref">Black et al. 2010</a>)</span>. Pertussis can infect people of all ages but is most severe and life threatening for infants under a year old <span class="citation" data-cites="Healy2015">(<a href="#ref-Healy2015" role="doc-biblioref">Healy et al. 2015</a>)</span>. This is due to both the small size of their airways and because they are too young to have completed their full course of vaccinations.</p>
+<p>Transmission occurs primarily through bacteria laden respiratory droplets produced when an infected individual coughs and sneezes <span class="citation" data-cites="warfel2012">(<a href="#ref-warfel2012" role="doc-biblioref">Warfel, Beren, and Merkel 2012</a>)</span>. Inhaled bacteria can then attach and colonize ciliated cells of the respiratory tract in a new host (<a href="#fig-pertussislungs">Figure&nbsp;1</a>). Proliferating bacteria release a potent cocktail of toxins that both damage cilia and impede the immune response to infection (<a href="#fig-pertussislungs">Figure&nbsp;1</a>) <span class="citation" data-cites="pinkbook2022">(<a href="#ref-pinkbook2022" role="doc-biblioref"><span>“Pinkbook: Pertussis (CDC)”</span> 2022</a>)</span>.</p>
+<div id="fig-pertussislungs" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://www.cmi-pb.org/media/images/Screen_Shot_2023-07-27_at_11.08.04_AM.width-800.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: <em>Bordetella pertussis</em> attacks cells lining the airways. The rope-like structures shown are cilia, that typically sweep away inhaled dirt and foreign objects. In a pertussis infection, the bacteria use adhesive proteins (such as Filamentous hemagglutinin, Pertactin, and Fimbriae) to stick whilst releasing toxins (including Pertussis toxin, Dermonecrotic toxin and Tracheal cytotoxin) that damage cells, trigger inflammation and increase mucus production leading to uncontrollable violent coughing. Source: Nicolle R. Fuller/Science Photo Library</figcaption>
+</figure>
+</div>
+<p>These damaged cilia can no longer effectively transport mucus and foreign particles out of the lungs. This leads to mucus build up and contraction of the airways leading to violent, uncontrollable coughing fits. As the cough becomes more severe it may be followed by a “whooping” sound upon inhalation. These characteristic symptoms can persist for many weeks giving rise to the common disease names of whooping cough and the hundred day cough. In this first vignette we focus largely on pertussis pathogenesis and history of control measures. This is important because, as discussed below, despite high levels of vaccination many countries are now experiencing a significant increase in pertussis cases with large outbreaks now once again a major public health concern.</p>
+</section>
+<section id="disease-pathogenesis" class="level2">
+<h2 class="anchored" data-anchor-id="disease-pathogenesis">Disease pathogenesis</h2>
+<p>Pertussis is primarily a toxin-mediated disease <span class="citation" data-cites="pinkbook2022">(<a href="#ref-pinkbook2022" role="doc-biblioref"><span>“Pinkbook: Pertussis (CDC)”</span> 2022</a>)</span>. The bacteria produce toxins and other molecules (<a href="#tbl-antigens">Table&nbsp;1</a>) that damage cilia, suppress the immune response, disrupt intracellular signaling, and cause inflammation of the respiratory tract.</p>
+<div id="tbl-antigens" class="anchored">
+<table class="table">
+<caption>Table&nbsp;1: Numerous bacterial factors important to this disease process have been characterized. *Of particular note, FHA, PT, FIM and PRN are typically included in current acellular pertussis vaccines that we will discuss further below.</caption>
+<thead>
+<tr class="header">
+<th><strong>Bacterial component</strong></th>
+<th><strong>Biological function</strong></th>
+<th><strong>Acellular vaccine component*</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Filamentous hemagglutinin (<a href="https://www.google.com/url?q=https://www.cmi-pb.org/terminology/uniprot:P12255&amp;sa=D&amp;source=editors&amp;ust=1697753672850237&amp;usg=AOvVaw2VQBUA9FGAgOG3x0hIrF8J">FHA</a>)</td>
+<td>An adhesin molecule that helps the bacterium attach to the host’s respiratory cells. FHA is also involved in immune evasion, making it a critical component of the vaccine.</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Pertactin (<a href="https://www.google.com/url?q=https://www.cmi-pb.org/terminology/uniprot:P14283&amp;sa=D&amp;source=editors&amp;ust=1697753672851520&amp;usg=AOvVaw0gTuk7iM5oZLGPE4I4zber">PRN</a>)</td>
+<td>An adhesin protein used to bind to host cells. It also plays a role in the bacterium’s ability to resist the host’s immune response. | Yes |</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fimbriae (<a href="https://www.google.com/url?q=https://www.cmi-pb.org/terminology/uniprot:Q5I8X0&amp;sa=D&amp;source=editors&amp;ust=1697753672852928&amp;usg=AOvVaw00XssCsj2KeOdUBFADgKIE">FIM</a>)</td>
+<td>Additional adhesin proteins that also suppress the initial inflammatory response to infection</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Pertussis toxin (PT)</td>
+<td>A secreted toxin that catalyzes ADP ribosylation of host G-proteins, which in turn causes a number of effects including increased levels of cAMP and reduced ATP levels disrupting host cell signaling, coordination and physiology. PT also &nbsp;induces lymphocytosis and pancreatic islet cell activation. Antibodies to PT are associated with clinical immunity to pertussis.</td>
+<td>Yes: inactivated toxin</td>
+</tr>
+<tr class="odd">
+<td>Adenylate cyclase toxin (<a href="https://www.google.com/url?q=https://www.cmi-pb.org/terminology/uniprot:C8C508&amp;sa=D&amp;source=editors&amp;ust=1697753672855070&amp;usg=AOvVaw2p8dLWcqmGRW949DtYtGrw">ACT</a>)</td>
+<td>Cytotoxin that synthesizes cAMP in host cells, which in turn disrupts host cell physiology. Anti-inflammatory effect through action on host immune cells including inhibition of phagocytic function</td>
+<td>Not included due to protein stability issues.</td>
+</tr>
+<tr class="even">
+<td>Dermonecrotic toxin (DNT)</td>
+<td>A toxin that activates host Rho GTPases leading to changes in host cell morphology and formation of necrotic lesions leading to dermal necrosis and vasoconstriction.</td>
+<td>Not included as&nbsp;DNT is a weak immunogen and antibodies to it are nonprotective in animal challenge tests.</td>
+</tr>
+<tr class="odd">
+<td>Tracheal colonization factor (TCF)</td>
+<td>An adhesion peptidoglycan that is produced during cell wall remodeling.</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Bordetella resistance to killing protein A system (BrkA)</td>
+<td>An outer-membrane protein involved in adherence and complement resistance. Similar in structure to PRN. Antibodies to BrkA augment killing of&nbsp;B pertussis.</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Lipopolysaccharide (<a href="https://www.google.com/url?q=https://www.cmi-pb.org/terminology/CHEBI:35371&amp;sa=D&amp;source=editors&amp;ust=1697753672859497&amp;usg=AOvVaw2PsA5mk-zdr2xFhOcuCacf">LPS</a>)</td>
+<td>Structural component of bacterial outer membrane with proinflammatory activity linked to resistance to host defense molecules.</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Tracheal cytotoxin (TCT)</td>
+<td>A toxin inducing paralysis and destruction of respiratory ciliated epithelium.</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Endotoxin</td>
+<td>Similar to endotoxin in other Gram-negative organisms. Contributes to fever and local reactions.</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>BvgAS system</td>
+<td>Global regulator of expression of most&nbsp;B pertussis&nbsp;virulence factors.</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="disease-progression" class="level3">
+<h3 class="anchored" data-anchor-id="disease-progression">Disease progression</h3>
+<p>The incubation period for pertussis is typically 7 to 10 days, but it can range from 5 to 21 days. Once the bacterial concentration increases, damage to the respiratory tract causes the first mild symptoms. These mimic a common cold including a runny nose, low-grade fever, and a cough. This is called the <em>catarrhal phase</em> and it lasts about two weeks (<a href="#fig-disease">Figure&nbsp;2</a>). At this point, pertussis is very contagious due to the presence of a high concentration of bacteria in the respiratory tract that makes them easy to aerosolize.</p>
+<div id="fig-disease" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/figure2_disease_phases.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Pertussis develops in three phases. The catarrhal phase (associated with cold-like symptoms, such as runny nose, mild cough, low-grade fever, or sneezing). The paroxysmal phase (associated with the most severe symptoms including uncontrollable coughing fits), and finally the convalescent or recovery phase.</figcaption>
+</figure>
+</div>
+<p>The catarrhal phase is followed by the more severe <em>paroxysmal phase</em>, which lasts another one to six weeks. Even though the immune system is killing and clearing the bacteria during this phase, symptoms persist from the damage caused by their released toxins. The most notable symptoms include paroxysms (uninterrupted coughing fits) followed by difficulty breathing. The violent force of these paroxysms can cause vomiting, a collapsed lung and broken ribs. Rather than having violent coughing fits or making a whooping noise, really young infants often have gasping, cyanosis and life threatening apnea (pauses in breathing). These symptoms typically persist for several weeks. Finally, the <em>convalescent phase</em> begins, which lasts between two to three weeks, during which the cough slowly improves, the paroxysms and whooping fade away, and the airway heals. It is best to diagnose pertussis during the early catarrhal phase as treatment with antibiotics is most effective during this time.</p>
+</section>
+</section>
+<section id="history" class="level2">
+<h2 class="anchored" data-anchor-id="history">History</h2>
+<p>The first pertussis epidemic was reported in Paris in the year 1578 <span class="citation" data-cites="holmes1940">(<a href="#ref-holmes1940" role="doc-biblioref">Holmes 1940</a>)</span> <span class="citation" data-cites="cherry2015">(<a href="#ref-cherry2015" role="doc-biblioref">James D. Cherry 2015</a>)</span>. The French physician Guillaume de Baillou studied this epidemic with his observations published posthumously in 1640 (<a href="#fig-baillou">Figure&nbsp;3</a>). In the British Isles, the illness was called “the kink” (a Scottish term for fit or paroxysm), and in Northern Europe it was known as “kindhoest” (a Teutonic word for child cough) <span class="citation" data-cites="cherry1999">(<a href="#ref-cherry1999" role="doc-biblioref">J. D. Cherry 1999a</a>)</span>. Other early names include hooping cough, tusis perennis, tussis epidemica infantum, and tussis quinta <span class="citation" data-cites="cherry2015">(<a href="#ref-cherry2015" role="doc-biblioref">James D. Cherry 2015</a>)</span> <span class="citation" data-cites="cherry1999">(<a href="#ref-cherry1999" role="doc-biblioref">J. D. Cherry 1999a</a>)</span>.</p>
+<div id="fig-baillou" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../timeline/img/bailou_portrait.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Guillaume de Baillou (Latin: Ballonius) lived from 1538 to 1616 and is credited with providing the first clinical description of pertussis.Credit: Portrait of Guillaume de Baillou. Wellcome Collection. Attribution 4.0 International (CC BY 4.0)</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>TO DO: Quote Baillou’s early description text, which is rather graphic and and still holds true for the disease today. Include the timeline history with link-out (“read more”) covering these interesting historical notes.</p>
+</blockquote>
+<p>The name pertussis (from the Latin for “intensive cough”) was first introduced in England in 1679 <span class="citation" data-cites="lapin1943">(<a href="#ref-lapin1943" role="doc-biblioref">Lapin 1943</a>)</span>. Working at the Pasteur Institute in Paris in 1900, Jules Bordet and Octave Gengou observed the causative bacteria in the sputum of a patient with pertussis, and in 1906 they reported its first isolation <span class="citation" data-cites="bordet1906">(<a href="#ref-bordet1906" role="doc-biblioref">Bordet and Gengou 1906</a>)</span>. It was then named Bordet-Gengou bacillus, later Haemophilus pertussis, and finally Bordetella pertussis. During this period of the 20th century pertussis was one of the most common childhood diseases and a major cause of childhood mortality <span class="citation" data-cites="cherry1999a">(<a href="#ref-cherry1999a" role="doc-biblioref">J. D. Cherry 1999b</a>)</span>. In the United States alone there were often more than 200,000 cases reported annually <span class="citation" data-cites="pertussi2023">(<a href="#ref-pertussi2023" role="doc-biblioref"><span>“Pertussis Surveillance: Cases by Year (CDC)”</span> 2023a</a>)</span>. This figure is likely an underestimate as pertussis, even today, remains underreported and misdiagnosed.</p>
+<p>Since pertussis was such a devastating disease, vaccine development was considered soon after B. pertussis isolation. In the 1930s, Pearl Kendrick and Grace Elderling, working at the Michigan Department of Health laboratory, developed an effective chemically inactivated whole-cell vaccine <span class="citation" data-cites="kendrick1936">(<a href="#ref-kendrick1936" role="doc-biblioref">Kendrick and Eldering 1936</a>)</span> <span class="citation" data-cites="shapiro-shapin2010">(<a href="#ref-shapiro-shapin2010" role="doc-biblioref">Shapiro-Shapin 2010</a>)</span>. The vaccine became widely available in the United States in 1940 and was approved by the American Academy of Pediatrics in 1943 <span class="citation" data-cites="shapiro-shapin2010">(<a href="#ref-shapiro-shapin2010" role="doc-biblioref">Shapiro-Shapin 2010</a>)</span>. Five years later a combination vaccine that included diphtheria and tetanus toxoids in addition to inactivated B. pertussis (so called “DTwP” vaccine) was first licensed and became the formulation of choice until 1992 <span class="citation" data-cites="pittman1991">(<a href="#ref-pittman1991" role="doc-biblioref">Pittman 1991</a>)</span>. This vaccine was highly effective with the reported annual incidence of pertussis dropping from a high of 150–250 cases/100,000 persons (&gt;200,000 cases) to a low of 0.5 cases/100,000 (&lt;1,000 cases) after widespread vaccination <span class="citation" data-cites="pertussi2023a">(<a href="#ref-pertussi2023a" role="doc-biblioref"><span>“Pertussis Surveillance: Cases by Year (CDC)”</span> 2023b</a>)</span>.</p>
+<p>The history of human interaction with <em>Bordetella pertussis</em> is in our view fascinating. As described in our <a href="../timeline/pertussis_timeline.html" target="_blank">supplementary timeline figure</a> it touches on major milestones in the development of immunology, large scale vaccination programs, and sadly growing public missinformation and vaccine hesitancy.</p>
+</section>
+<section id="pertussis-vaccines" class="level2">
+<h2 class="anchored" data-anchor-id="pertussis-vaccines">Pertussis vaccines</h2>
+<p>Pertussis vaccination is, in general, highly effective at preventing the disease. The first generation of pertussis vaccines were whole-cell vaccines (wP). These used inactivated B. pertussis cells to stimulate an immune response and subsequent immunity (<a href="#fig-apwpvacine">Figure&nbsp;4</a>).</p>
+<div id="fig-apwpvacine" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/wp_ap_vacine.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: Whole-cell pertussis vaccines are inactivated bacteria with many antigens, including endotoxins, which trigger broad immunity. The acellular vaccines use only a few antigens (see Table 1), including a weakened pertussis toxin, to limit side effects.</figcaption>
+</figure>
+</div>
+<p>The wP vaccines proved highly effective in reducing the incidence of severe disease. During the 6-year period from 1940 through 1945, more than 1 million cases of pertussis were reported, an average of 175,000 cases per year (approximately 150 cases per 100,000 population) <span class="citation" data-cites="pertussi2023a">(<a href="#ref-pertussi2023a" role="doc-biblioref"><span>“Pertussis Surveillance: Cases by Year (CDC)”</span> 2023b</a>)</span>. Following wP vaccine introduction in 1945, pertussis incidence gradually declined, reaching 15,000 reported cases in 1960 (approximately 8 per 100,000 population). By 1970, annual incidence was fewer than 5,000 cases per year and, between 1980 and 1990, an average of 2,900 cases per year were reported (approximately 1 per 100,000 population) (Figure 5). Despite these successes, early wP vaccines were mired in controversy due to their association with adverse events, including fever, local reactions at the injection site, and in rare cases, neurological complications 5,13,14. This led to reduced public acceptance and uptake of the vaccine necessitating the need for safer alternatives.</p>
+<div id="fig-casestimeline" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/unnamed-chunk-2-1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;5: Pertussis cases by year in the United States (1922-2019) from the Centers for Disease Control and Prevention (CDC). Dashed lines indicate the introduction of wP vaccines (DTP) and the conversion to aP vaccines (DTaP and Tdap) in 1946 and 2008, respectively. In the pre-vaccine era (before 1946) pertussis was a much more common disease and a major cause of infant mortality. Introduction of the first pertussis vaccination in 1946 resulted in a dramatic reduction in the number of yearly cases from &gt; 200,000 in the 1940s to &lt; 2,000 in the 1970s. However, it is also clear from the CDC data that pertussis cases are once again increasing. For example, we can see that in 2012 the CDC reported 48,277 cases of pertussis in the United States. This is the largest number of cases reported since 1955. Source: CDC. National Notifiable Diseases Surveillance System, 2019.</figcaption>
+</figure>
+</div>
+<section id="the-switch-to-acellular-pertussis-vaccines" class="level3">
+<h3 class="anchored" data-anchor-id="the-switch-to-acellular-pertussis-vaccines">The switch to acellular pertussis vaccines</h3>
+<p>Traditional whole cell vaccines are reactogenic causing fever and local reactions in many vaccines <span class="citation" data-cites="decker2021">(<a href="#ref-decker2021" role="doc-biblioref">Decker and Edwards 2021a</a>)</span>. To address this issue in the 1980s and 1990s, acellular pertussis vaccines (aP) were introduced, consisting of up to five purified antigens of B. pertussis (<a href="#fig-apwpvacine">Figure&nbsp;4</a> and <a href="#tbl-antigens">Table&nbsp;1</a>). The rationale behind this development was to reduce the risk of adverse events by eliminating unnecessary bacterial components while maintaining the vaccine’s efficacy. Indeed, these vaccines demonstrated a superior safety profile compared to their whole-cell counterparts <span class="citation" data-cites="cody1981">(<a href="#ref-cody1981" role="doc-biblioref">Cody et al. 1981</a>)</span>. These aP vaccine formulations have subsequently been adopted in most Western countries including the United States.</p>
+</section>
+<section id="ap-vaccine-composition" class="level3">
+<h3 class="anchored" data-anchor-id="ap-vaccine-composition">aP vaccine composition</h3>
+<p>The current aP vaccine used in the United States is part of combination vaccines that include immunization against tetanus and diphtheria (the T and D in <a href="#tbl-dtaptdap">Table&nbsp;2</a>). The two primary vaccines differ in their relative concentrations of these components and are called DTaP and Tdap (for diphtheria, tetanus, and acellular pertussis). DTaP is intended for children under 7 years of age and Tdap for older children and adults. This later Tdap vaccine contains lower doses of diphtheria and pertussis antigens and is typically intended to reinforce immunity (i.e.&nbsp;as a boost vaccine). The pertussis portion of these vaccines typically contain purified pertussis toxin (PT), filamentous hemagglutinin (FHA), fimbriae (FIM) and pertactin (PRN) protein antigens (see <a href="#tbl-antigens">Table&nbsp;1</a> and <a href="#fig-apwpvacine">Figure&nbsp;4</a>). These components work in concert to stimulate the immune system to produce a response that will be effective against infection. By including multiple antigens, the vaccine can provide broader protection against different strains of B. pertussis that might vary in the expression of these components. It’s worth noting that the specific formulation of aP vaccines can vary by manufacturer and country. For instance, some formulations might not include all the components listed above, but the vaccines used in the United States generally include all four (<a href="#tbl-dtaptdap">Table&nbsp;2</a>).</p>
+<div id="tbl-dtaptdap" class="anchored">
+<table class="table">
+<caption>Table&nbsp;2: Major pertussis vaccines used in the USA along their trade names and relative antigen concentrations for the major pertussis derived components. These include: PT = pertussis toxin, FHA = filamentous hemagglutinin, PRN = pertactin, FIM 2+3 = fimbriae types 2 and 3. Note the reduced concentrations for Tdap booster vaccines.</caption>
+<colgroup>
+<col style="width: 17%">
+<col style="width: 16%">
+<col style="width: 21%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Vaccine Type</th>
+<th>Trade Name</th>
+<th>Manufacturers</th>
+<th>Components</th>
+<th>Concentrations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>DTaP</strong></td>
+<td>Daptacel</td>
+<td>Sanofi Pasteur</td>
+<td>Detoxified PT</td>
+<td>10 µg</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>FHA</td>
+<td>5 µg</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>Pertactin</td>
+<td>3 µg</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>FIM</td>
+<td>5 µg</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Infanrix</td>
+<td>GlaxoSmithKline</td>
+<td>Inactivated PT</td>
+<td>25 µg</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>FHA</td>
+<td>25 µg</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>Pertactin</td>
+<td>8 µg</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Pentacel</td>
+<td>Sanofi Pasteur</td>
+<td>Detoxified PT</td>
+<td>20 µg</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>FHA</td>
+<td>20 µg</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>Pertactin</td>
+<td>3 µg</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>FIM</td>
+<td>5 µg</td>
+</tr>
+<tr class="even">
+<td><strong>Tdap</strong></td>
+<td>Adacel</td>
+<td>Sanofi Pasteur</td>
+<td>Detoxified PT</td>
+<td>2.5 µg</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>FHA</td>
+<td>5 µg</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>Pertactin</td>
+<td>3 µg</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>FIM</td>
+<td>5 µg</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Boostrix</td>
+<td>GlaxoSmithKline</td>
+<td>Inactivated PT</td>
+<td>8 µg</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>FHA</td>
+<td>8 µg</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>Pertactin</td>
+<td>2.5 µg</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="the-resurgence-of-pertussis-cases" class="level2">
+<h2 class="anchored" data-anchor-id="the-resurgence-of-pertussis-cases">The resurgence of pertussis cases</h2>
+<p>The number of pertussis cases has been gradually increasing in the United States and other Western countries since the early 1990s (<a href="#fig-casestimeline">Figure&nbsp;5</a>). Of particular concern, there have been a number of large epidemic peaks in disease observed since the mid-2000s (<a href="#fig-casesrecent">Figure&nbsp;6</a>). For example, a total of 48,277 pertussis cases were reported in 2012, the largest number since the mid-1950s.</p>
+<div id="fig-casesrecent" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/unnamed-chunk-2-1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;6: Recent pertussis incidence per 100,000 persons by age group in the United from 1990 to 2021. Data source: CDC. National Notifiable Diseases Surveillance System, 2023.</figcaption>
+</figure>
+</div>
+<p>There are likely multiple factors contributing to this recent significant increase in the incidence of pertussis. These include changes in diagnostic testing, heightened recognition and reporting of pertussis cases, and mutation of the bacteria. However, these have not been supported by genetic, experimental and epidemiological data [ref]. The main hypothesis therefore to explain this phenomenon is the apparent waning of vaccine-induced immunity in infants primed with aP compared to wP in countries, including the United States, that have transitioned to acellular vaccines. However, it is currently unclear why these newer aP vaccines might be less effective long term than their older wP counterparts.</p>
+<section id="the-differences-in-immune-responses-ap-vs.-wp-priming" class="level3">
+<h3 class="anchored" data-anchor-id="the-differences-in-immune-responses-ap-vs.-wp-priming">The differences in immune responses: aP vs.&nbsp;wP priming</h3>
+<p>Although aP vaccines exhibit fewer adverse reactions and provide good protection in the first few years after vaccination <span class="citation" data-cites="decker2021a">(<a href="#ref-decker2021a" role="doc-biblioref">Decker and Edwards 2021b</a>)</span>, the duration of protection appears to be shorter than expected. Specifically, an increase in pertussis outbreaks has been reported in various countries that switched from wP to aP vaccines <span class="citation" data-cites="decker2021a">(<a href="#ref-decker2021a" role="doc-biblioref">Decker and Edwards 2021b</a>)</span> <span class="citation" data-cites="diavatopoulos2017">(<a href="#ref-diavatopoulos2017" role="doc-biblioref">Diavatopoulos and Edwards 2017</a>)</span>. Many of these outbreaks occurred among children who only received aP vaccines. As a result, multiple studies about waning immunity post-aP vaccination have been conducted <span class="citation" data-cites="Klein2012">(<a href="#ref-Klein2012" role="doc-biblioref">Klein et al. 2012</a>)</span> <span class="citation" data-cites="Klein2016">(<a href="#ref-Klein2016" role="doc-biblioref">Klein et al. 2016</a>)</span> <span class="citation" data-cites="Witt2013">(<a href="#ref-Witt2013" role="doc-biblioref">Witt et al. 2013</a>)</span> <span class="citation" data-cites="Gambhir2015">(<a href="#ref-Gambhir2015" role="doc-biblioref">Gambhir et al. 2015</a>)</span>. These include the characterization of differences in the immune response against aP and wP vaccines <span class="citation" data-cites="Wilk2019">(<a href="#ref-Wilk2019" role="doc-biblioref">Wilk et al. 2019</a>)</span> <span class="citation" data-cites="Ross2013">(<a href="#ref-Ross2013" role="doc-biblioref">Ross et al. 2013</a>)</span> <span class="citation" data-cites="van2018">(<a href="#ref-van2018" role="doc-biblioref">Lee et al. 2018</a>)</span> <span class="citation" data-cites="da2018">(<a href="#ref-da2018" role="doc-biblioref">Silva Antunes et al. 2018</a>)</span> <span class="citation" data-cites="da2020">(<a href="#ref-da2020" role="doc-biblioref">Silva Antunes et al. 2020</a>)</span> <span class="citation" data-cites="da2021">(<a href="#ref-da2021" role="doc-biblioref">Silva Antunes et al. 2021</a>)</span> <span class="citation" data-cites="Schure2013">(<a href="#ref-Schure2013" role="doc-biblioref">Schure et al. 2013</a>)</span> <span class="citation" data-cites="Schure2012">(<a href="#ref-Schure2012" role="doc-biblioref">Schure et al. 2012</a>)</span>. These have noted differences in polarization and proliferation of T cell responses in adults originally vaccinated (primed) with aP vs.&nbsp;wP <span class="citation" data-cites="Aase2014">(<a href="#ref-Aase2014" role="doc-biblioref">Aase et al. 2014</a>)</span> <span class="citation" data-cites="da2018">(<a href="#ref-da2018" role="doc-biblioref">Silva Antunes et al. 2018</a>)</span> (<a href="#fig-immunediff">Figure&nbsp;7</a>). However, it remains unclear how this difference in immune responses is maintained over time between aP and wP primed vaccinees, despite subsequent Tdap booster vaccination.</p>
+<div id="fig-immunediff" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://www.cmi-pb.org/media/images/Screen_Shot_2023-09-21_at_5.27.50_PM.width-800.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;7: Differences in the human immune response to Tdap booster vaccination associated with wP vs aP priming in infancy. Source: 29920186</figcaption>
+</figure>
+</div>
+<p>Beyond these observations further study is required to better understand the type of immune responses that yield optimal, long-lasting protection and the underlying mechanisms responsible for this protection.</p>
+</section>
+</section>
+<section id="next-steps-in-the-era-of-systems-vaccinology" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps-in-the-era-of-systems-vaccinology">Next steps in the era of systems vaccinology</h2>
+<p>Why is this vaccine-preventable disease on the upswing and how can we effectively respond to limit pertussis outbreaks? Clearly, further research is needed to fully elucidate the causes of waning protection before the best pathway forward can be determined. In particular, more complete data on host responses to vaccination and infection are needed to help design the most effective vaccine and vaccination program.</p>
+<p>New approaches such as systems vaccinology, that combine systems biology and genomics, are ideally placed to provide a more holistic picture of protective pertussis-specific immune responses. In this vein, the new and ongoing CMI-PB project <span class="citation" data-cites="Shinde2023">(<a href="#ref-Shinde2023" role="doc-biblioref">Shinde et al. 2023</a>)</span> aims to provide the scientific community with this very information and evaluate differences over time in wP and aP vaccinated individuals (<a href="#fig-cmipbdata">Figure&nbsp;8</a>). This project integrates different biological readouts including transcriptomic, proteomic, and cytometric data to broadly define the immune state of large groups of individuals, and to define changes in a pre- and post-vaccine setting. In particular, CMI-PB tracks and makes freely available long-term humoral and cellular immune response data for a large number of individuals who received either DTwP or DTaP combination vaccines in infancy followed by Tdap booster vaccinations.</p>
+<div id="fig-cmipbdata" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://www.cmi-pb.org/media/images/Outline_of_recruitment_and_study_design.width-800.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;8: The CMI-PB tracks and makes freely available long-term humoral and cellular immune response data for a large number of individuals who received either DTwP or DTaP combination vaccines in infancy followed by Tdap booster vaccinations.</figcaption>
+</figure>
+</div>
+<section id="cmi-pb-project" class="level3">
+<h3 class="anchored" data-anchor-id="cmi-pb-project">CMI-PB project</h3>
+<p>Collectively, this data comprise a comprehensive, high-quality, and freely accessible resource regarding Pertussis booster vaccination. Critically, the CMI-PB project encourages community participation through so-called “computational prediction challenges” (<a href="#fig-cmipbchallange">Figure&nbsp;9</a>). These prediction challenges serve as a platform for testing and improving computational models of immunity, encouraging collaboration and discussion, and ultimately advancing the understanding of immune responses to vaccinations. The challenges are open to various labs, researchers, and, in later challenges, members of the public.</p>
+<div id="fig-cmipbchallange" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://www.cmi-pb.org/media/images/challenge_overview.width-800.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;9: Every year, CMI-PB host an open contest that challenges participants to predict the immune responses of 20 individuals after pertussis booster vaccination.</figcaption>
+</figure>
+</div>
+<p>These prediction challenges (<a href="#fig-cmipbchallange">Figure&nbsp;9</a>) are designed to stimulate collaborative efforts, enabling faster advancement in scientific knowledge than could be achieved by individual groups. CMI-PB generates experimental data explicitly for model evaluation. This data is released annually, and associated contests are organized to evaluate the performance of computational models developed by participating teams. Participants are given a list of questions related to predicting immune responses, with the predictions to be made in the form of ranking readouts from the highest to the lowest response in the tested donors. The predictions are evaluated by independent researchers using statistical methods like Spearman correlation and ROC curve analysis. This approach facilitates constructive discussions between modelers and experimentalists based on transparent metrics. Through these challenges, the CMI-PB project aims to address common challenges in developing computational models for biological applications, such as testing their generalizability and predictive performance, especially in the face of high-dimensional data and inter-individual variability. The challenges are organized annually, with the inaugural challenge having taken place in May 2022. The project commits to organizing four annual challenges, with each subsequent challenge aiming to engage a broader segment of the scientific community and the public (<a href="#tbl-comps">Table&nbsp;3</a>).</p>
+<div id="tbl-comps" class="anchored">
+<table class="table">
+<caption>Table&nbsp;3: CMI-PB runs annual prediction challenges with initial rounds of testing followed by open iterations using new experimental data that are generated each year for community model and prediction evaluation.</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 20%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Challenge</th>
+<th>Participants</th>
+<th>Size of training dataset</th>
+<th>Size of test dataset</th>
+<th>Current status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><ol type="1">
+<li>Dry Run</li>
+</ol></td>
+<td>CMI-PB consortium</td>
+<td>60 (28 aP, 32 wP)</td>
+<td>36 (19 aP, 17 wP)</td>
+<td>Concluded May 2022</td>
+</tr>
+<tr class="even">
+<td><ol start="2" type="1">
+<li>Invited</li>
+</ol></td>
+<td>Invited experts</td>
+<td>96 (47 aP, 49 wP)</td>
+<td>23 (13 aP, 10 WP)</td>
+<td>Announced Aug 2023</td>
+</tr>
+<tr class="odd">
+<td><ol start="3" type="1">
+<li>Open</li>
+</ol></td>
+<td>Public</td>
+<td>119 (60 aP, 59 wP)</td>
+<td>32 (16 aP, 16 WP)</td>
+<td>Announced Jan 2024</td>
+</tr>
+<tr class="even">
+<td><ol start="4" type="1">
+<li>Open</li>
+</ol></td>
+<td>Public</td>
+<td>151 (76 aP, 85 wP)</td>
+<td>32 (16 aP, 16 wP)</td>
+<td>Announced Dec 2024</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="learning-more-about-cmi-pb" class="level3">
+<h3 class="anchored" data-anchor-id="learning-more-about-cmi-pb">Learning more about CMI-PB</h3>
+<p>Further introducing and describing the CMI-PB project is the subject of our <a href="LINK">next vignette</a>. In broader terms, the remaining challenge will be to translate this new wealth of knowledge into both improved understanding of immune mechanisms and new intervention strategies to curb the apparently increasing frequency of <em>B. pertussis</em> infection.</p>
+</section>
+</section>
+<section id="selected-references" class="level2">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Selected References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Aase2014" class="csl-entry" role="listitem">
+Aase, Audun, Tove Karin Herstad, Silje Bakken Jørgensen, Truls Michael Leegaard, Guy Berbers, Martin Steinbakk, and Ingeborg Aaberge. 2014. <span>“Anti-Pertussis Antibody Kinetics Following DTaP-IPV Booster Vaccination in Norwegian Children 7<span></span>8 Years of Age.”</span> <em>Vaccine</em> 32 (45): 5931–36. <a href="https://doi.org/10.1016/j.vaccine.2014.08.069">https://doi.org/10.1016/j.vaccine.2014.08.069</a>.
+</div>
+<div id="ref-black2010" class="csl-entry" role="listitem">
+Black, Robert E., Simon Cousens, Hope L. Johnson, Joy E. Lawn, Igor Rudan, Diego G. Bassani, Prabhat Jha, et al. 2010. <span>“Global, regional, and national causes of child mortality in 2008: a systematic analysis.”</span> <em>Lancet (London, England)</em> 375 (9730): 1969–87. <a href="https://doi.org/10.1016/S0140-6736(10)60549-1">https://doi.org/10.1016/S0140-6736(10)60549-1</a>.
+</div>
+<div id="ref-bordet1906" class="csl-entry" role="listitem">
+Bordet, Jules, and Octave Gengou. 1906. <span>“Le Microbe de La Coqueluche.”</span> <em>Bulletin de l’Académie Royale de Médecine de Belgique</em> 20: 73141.
+</div>
+<div id="ref-cherry1999" class="csl-entry" role="listitem">
+Cherry, J. D. 1999a. <span>“Pertussis in the preantibiotic and prevaccine era, with emphasis on adult pertussis.”</span> <em>Clinical Infectious Diseases: An Official Publication of the Infectious Diseases Society of America</em> 28 Suppl 2 (June): S107–111. <a href="https://doi.org/10.1086/515057">https://doi.org/10.1086/515057</a>.
+</div>
+<div id="ref-cherry1999a" class="csl-entry" role="listitem">
+———. 1999b. <span>“Pertussis in the preantibiotic and prevaccine era, with emphasis on adult pertussis.”</span> <em>Clinical Infectious Diseases: An Official Publication of the Infectious Diseases Society of America</em> 28 Suppl 2 (June): S107–111. <a href="https://doi.org/10.1086/515057">https://doi.org/10.1086/515057</a>.
+</div>
+<div id="ref-cherry2015" class="csl-entry" role="listitem">
+Cherry, James D. 2015. <span>“The History of Pertussis (Whooping Cough); 1906<span></span>2015: Facts, Myths, and Misconceptions.”</span> <em>Current Epidemiology Reports</em> 2: 120–30.
+</div>
+<div id="ref-cody1981" class="csl-entry" role="listitem">
+Cody, C. L., L. J. Baraff, J. D. Cherry, S. M. Marcy, and C. R. Manclark. 1981. <span>“Nature and rates of adverse reactions associated with DTP and DT immunizations in infants and children.”</span> <em>Pediatrics</em> 68 (5): 650–60.
+</div>
+<div id="ref-decker2021" class="csl-entry" role="listitem">
+Decker, Michael D, and Kathryn M Edwards. 2021a. <span>“Pertussis (Whooping Cough).”</span> <em>The Journal of Infectious Diseases</em> 224 (Suppl 4): S310–20. <a href="https://doi.org/10.1093/infdis/jiaa469">https://doi.org/10.1093/infdis/jiaa469</a>.
+</div>
+<div id="ref-decker2021a" class="csl-entry" role="listitem">
+———. 2021b. <span>“Pertussis (Whooping Cough).”</span> <em>The Journal of Infectious Diseases</em> 224 (Suppl 4): S310–20. <a href="https://doi.org/10.1093/infdis/jiaa469">https://doi.org/10.1093/infdis/jiaa469</a>.
+</div>
+<div id="ref-diavatopoulos2017" class="csl-entry" role="listitem">
+Diavatopoulos, Dimitri A., and Kathryn Margaret Edwards. 2017. <span>“What Is Wrong with Pertussis Vaccine Immunity? Why Immunological Memory to Pertussis Is Failing.”</span> <em>Cold Spring Harbor Perspectives in Biology</em> 9 (12): a029553. <a href="https://doi.org/10.1101/cshperspect.a029553">https://doi.org/10.1101/cshperspect.a029553</a>.
+</div>
+<div id="ref-Gambhir2015" class="csl-entry" role="listitem">
+Gambhir, Manoj, Thomas A. Clark, Simon Cauchemez, Sara Y. Tartof, David L. Swerdlow, and Neil M. Ferguson. 2015. <span>“A Change in Vaccine Efficacy and Duration of Protection Explains Recent Rises in Pertussis Incidence in the United States.”</span> Edited by Marcel Salathé. <em>PLOS Computational Biology</em> 11 (4): e1004138. <a href="https://doi.org/10.1371/journal.pcbi.1004138">https://doi.org/10.1371/journal.pcbi.1004138</a>.
+</div>
+<div id="ref-Healy2015" class="csl-entry" role="listitem">
+Healy, C. Mary, Marcia A. Rench, Susan H. Wootton, and Luis A. Castagnini. 2015. <span>“Evaluation of the Impact of a Pertussis Cocooning Program on Infant Pertussis Infection.”</span> <em>Pediatric Infectious Disease Journal</em> 34 (1): 22–26. <a href="https://doi.org/10.1097/inf.0000000000000486">https://doi.org/10.1097/inf.0000000000000486</a>.
+</div>
+<div id="ref-holmes1940" class="csl-entry" role="listitem">
+Holmes, WH. 1940. <span>“Whooping-Cough, or Pertussis.”</span> <em>Bacillary and Rickettsial Infections: Acute and Chronic. Macmillan, New York, NY</em>, 394–414.
+</div>
+<div id="ref-kendrick1936" class="csl-entry" role="listitem">
+Kendrick, Pearl, and Grace Eldering. 1936. <span>“Progress Report on Pertussis Immunization.”</span> <em>American Journal of Public Health and the Nations Health</em> 26 (1): 8–12. <a href="https://doi.org/10.2105/AJPH.26.1.8">https://doi.org/10.2105/AJPH.26.1.8</a>.
+</div>
+<div id="ref-Klein2016" class="csl-entry" role="listitem">
+Klein, Nicola P., Joan Bartlett, Bruce Fireman, and Roger Baxter. 2016. <span>“Waning Tdap Effectiveness in Adolescents.”</span> <em>Pediatrics</em> 137 (3). <a href="https://doi.org/10.1542/peds.2015-3326">https://doi.org/10.1542/peds.2015-3326</a>.
+</div>
+<div id="ref-Klein2012" class="csl-entry" role="listitem">
+Klein, Nicola P., Joan Bartlett, Ali Rowhani-Rahbar, Bruce Fireman, and Roger Baxter. 2012. <span>“Waning Protection After Fifth Dose of Acellular Pertussis Vaccine in Children.”</span> <em>New England Journal of Medicine</em> 367 (11): 1012–19. <a href="https://doi.org/10.1056/nejmoa1200850">https://doi.org/10.1056/nejmoa1200850</a>.
+</div>
+<div id="ref-lapin1943" class="csl-entry" role="listitem">
+Lapin, Joseph H. 1943. <em>Whooping Cough.</em> Edited by Charles Thomas. Springfield, IL.
+</div>
+<div id="ref-van2018" class="csl-entry" role="listitem">
+Lee, Saskia van der, Lotte H. Hendrikx, Elisabeth A. M. Sanders, Guy A. M. Berbers, and Anne-Marie Buisman. 2018. <span>“Whole-Cell or Acellular Pertussis Primary Immunizations in Infancy Determines Adolescent Cellular Immune Profiles.”</span> <em>Frontiers in Immunology</em> 9 (January). <a href="https://doi.org/10.3389/fimmu.2018.00051">https://doi.org/10.3389/fimmu.2018.00051</a>.
+</div>
+<div id="ref-pertussi2023" class="csl-entry" role="listitem">
+<span>“Pertussis Surveillance: Cases by Year (CDC).”</span> 2023a. <a href="https://www.cdc.gov/pertussis/surv-reporting/cases-by-year.html">https://www.cdc.gov/pertussis/surv-reporting/cases-by-year.html</a>.
+</div>
+<div id="ref-pertussi2023a" class="csl-entry" role="listitem">
+———. 2023b. <a href="https://www.cdc.gov/pertussis/surv-reporting/cases-by-year.html">https://www.cdc.gov/pertussis/surv-reporting/cases-by-year.html</a>.
+</div>
+<div id="ref-pinkbook2022" class="csl-entry" role="listitem">
+<span>“Pinkbook: Pertussis (CDC).”</span> 2022. <a href="https://www.cdc.gov/vaccines/pubs/pinkbook/pert.html">https://www.cdc.gov/vaccines/pubs/pinkbook/pert.html</a>.
+</div>
+<div id="ref-pittman1991" class="csl-entry" role="listitem">
+Pittman, M. 1991. <span>“History of the development of pertussis vaccine.”</span> <em>Developments in Biological Standardization</em> 73: 13–29.
+</div>
+<div id="ref-Ross2013" class="csl-entry" role="listitem">
+Ross, Pádraig J., Caroline E. Sutton, Sarah Higgins, Aideen C. Allen, Kevin Walsh, Alicja Misiak, Ed C. Lavelle, Rachel M. McLoughlin, and Kingston H. G. Mills. 2013. <span>“Relative Contribution of Th1 and Th17 Cells in Adaptive Immunity to Bordetella Pertussis: Towards the Rational Design of an Improved Acellular Pertussis Vaccine.”</span> Edited by Eric T. Harvill. <em>PLoS Pathogens</em> 9 (4): e1003264. <a href="https://doi.org/10.1371/journal.ppat.1003264">https://doi.org/10.1371/journal.ppat.1003264</a>.
+</div>
+<div id="ref-Schure2012" class="csl-entry" role="listitem">
+Schure, Rose-Minke, Lotte H. Hendrikx, Lia G. H. de Rond, Kemal Öztürk, Elisabeth A. M. Sanders, Guy A. M. Berbers, and Anne-Marie Buisman. 2012. <span>“T-Cell Responses Before and After the Fifth Consecutive Acellular Pertussis Vaccination in 4-Year-Old Dutch Children.”</span> <em>Clinical and Vaccine Immunology</em> 19 (11): 1879–86. <a href="https://doi.org/10.1128/cvi.00277-12">https://doi.org/10.1128/cvi.00277-12</a>.
+</div>
+<div id="ref-Schure2013" class="csl-entry" role="listitem">
+———. 2013. <span>“Differential T- and B-Cell Responses to Pertussis in Acellular Vaccine-Primed Versus Whole-Cell Vaccine-Primed Children 2 Years After Preschool Acellular Booster Vaccination.”</span> <em>Clinical and Vaccine Immunology</em> 20 (9): 1388–95. <a href="https://doi.org/10.1128/cvi.00270-13">https://doi.org/10.1128/cvi.00270-13</a>.
+</div>
+<div id="ref-shapiro-shapin2010" class="csl-entry" role="listitem">
+Shapiro-Shapin, Carolyn G. 2010. <span>“Pearl Kendrick, Grace Eldering, and the Pertussis Vaccine.”</span> <em>Emerging Infectious Disease Journal</em> 16 (8): 1273. <a href="https://doi.org/10.3201/eid1608.100288">https://doi.org/10.3201/eid1608.100288</a>.
+</div>
+<div id="ref-Shinde2023" class="csl-entry" role="listitem">
+Shinde, Pramod, Ferran Soldevila, Joaquin Reyna, Minori Aoki, Mikkel Rasmussen, Lisa Willemsen, Mari Kojima, et al. 2023. <span>“A Systems Vaccinology Resource to Develop and Test Computational Models of Immunity.”</span> <a href="http://dx.doi.org/10.1101/2023.08.28.555193">http://dx.doi.org/10.1101/2023.08.28.555193</a>.
+</div>
+<div id="ref-da2018" class="csl-entry" role="listitem">
+Silva Antunes, Ricardo da, Mariana Babor, Chelsea Carpenter, Natalie Khalil, Mario Cortese, Alexander J. Mentzer, Grégory Seumois, et al. 2018. <span>“Th1/Th17 Polarization Persists Following Whole-Cell Pertussis Vaccination Despite Repeated Acellular Boosters.”</span> <em>Journal of Clinical Investigation</em> 128 (9): 3853–65. <a href="https://doi.org/10.1172/jci121309">https://doi.org/10.1172/jci121309</a>.
+</div>
+<div id="ref-da2020" class="csl-entry" role="listitem">
+Silva Antunes, Ricardo da, Lorenzo G. Quiambao, Aaron Sutherland, Ferran Soldevila, Sandeep Kumar Dhanda, Sandra K. Armstrong, Timothy J. Brickman, Tod Merkel, Bjoern Peters, and Alessandro Sette. 2020. <span>“Development and Validation of a <span><em>Bordetella Pertussis</em></span> Whole-Genome Screening Strategy.”</span> <em>Journal of Immunology Research</em> 2020 (April): 1–11. <a href="https://doi.org/10.1155/2020/8202067">https://doi.org/10.1155/2020/8202067</a>.
+</div>
+<div id="ref-da2021" class="csl-entry" role="listitem">
+Silva Antunes, Ricardo da, Ferran Soldevila, Mikhail Pomaznoy, Mariana Babor, Jason Bennett, Yuan Tian, Natalie Khalil, et al. 2021. <span>“A System-View of Bordetella Pertussis Booster Vaccine Responses in Adults Primed with Whole-Cell Versus Acellular Vaccine in Infancy.”</span> <em>JCI Insight</em> 6 (7). <a href="https://doi.org/10.1172/jci.insight.141023">https://doi.org/10.1172/jci.insight.141023</a>.
+</div>
+<div id="ref-warfel2012" class="csl-entry" role="listitem">
+Warfel, Jason M., Joel Beren, and Tod J. Merkel. 2012. <span>“Airborne transmission of Bordetella pertussis.”</span> <em>The Journal of Infectious Diseases</em> 206 (6): 902–6. <a href="https://doi.org/10.1093/infdis/jis443">https://doi.org/10.1093/infdis/jis443</a>.
+</div>
+<div id="ref-Wilk2019" class="csl-entry" role="listitem">
+Wilk, Mieszko M., Lisa Borkner, Alicja Misiak, Lucy Curham, Aideen C. Allen, and Kingston H. G. Mills. 2019. <span>“Immunization with Whole Cell but Not Acellular Pertussis Vaccines Primes CD4 T <span><sub>RM</sub></span> Cells That Sustain Protective Immunity Against Nasal Colonization with <span><em>Bordetella Pertussis</em></span>.”</span> <em>Emerging Microbes &amp; Infections</em> 8 (1): 169–85. <a href="https://doi.org/10.1080/22221751.2018.1564630">https://doi.org/10.1080/22221751.2018.1564630</a>.
+</div>
+<div id="ref-Witt2013" class="csl-entry" role="listitem">
+Witt, Maxwell A., Larry Arias, Paul H. Katz, Elizabeth T. Truong, and David J. Witt. 2013. <span>“Reduced Risk of Pertussis Among Persons Ever Vaccinated With Whole Cell Pertussis Vaccine Compared to Recipients of Acellular Pertussis Vaccines in a Large US Cohort.”</span> <em>Clinical Infectious Diseases</em> 56 (9): 1248–54. <a href="https://doi.org/10.1093/cid/cit046">https://doi.org/10.1093/cid/cit046</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
