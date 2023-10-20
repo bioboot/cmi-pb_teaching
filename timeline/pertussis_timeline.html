@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>Pertussis timeline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function(element){
+        return new bootstrap.Popover(element);
+    });
+});
+</script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+    	body{margin-top:20px;}
+.history-wrapper {
+    position: relative;
+    padding: 50px 0 50px;
+}
+.history-wrapper:after {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: #ededed;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+.history-wrapper .title-wrap {
+    opacity: 0.2;
+    padding: 100px 0 0 45px;
+}
+.history-wrapper .timeline-box {
+    position: relative;
+}
+.one-of-two {
+    width: 50%;
+    float: left;
+}
+.history-wrapper .timeline-box:not(:last-child) {
+    margin-bottom: 140px;
+}
+.timeline-box:nth-child(2n) {
+    padding: 0 0 0 140px;
+}
+.history-wrapper .timeline-box:nth-child(2n) {
+    margin-bottom: 140px;
+}
+.history-wrapper .timeline-box:nth-child(2n + 1) {
+    margin-top: -24%;
+    text-align: right;
+}
+.timeline-box:nth-child(2n + 1) {
+    padding: 0 140px 0 0;
+}
+.year {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    background: #fff;
+    top: 30%;
+    color: #3b3b3b;
+    transform: translateY(-50%);
+    border: 1px solid #dbdbdb;
+    line-height: 100px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+.timeline-box:nth-child(2n) .year {
+    left: 25px;
+}
+.timeline-box:nth-child(2n + 1) .year {
+    right: 32px;
+}
+.year:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-left: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    margin-top: -7.5px;
+}
+.timeline-box:nth-child(2n) .year:before {
+    left: -8px;
+    transform: rotate(45deg);
+}
+.timeline-box:nth-child(2n + 1) .year:before {
+    right: -8px;
+    transform: rotate(-135deg);
+}
+.timeline-box:after {
+    content: "";
+    width: 3px;
+    height: 0;
+    background: #ffa200;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+.timeline-box:nth-child(2n):after {
+    left: -1.5px;
+}
+.timeline-box:nth-child(2n + 1):after {
+    right: -1.5px;
+}
+.timeline-box:hover:after {
+    height: 97px;
+}
+.timeline-box:before {
+    content: "";
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: 5px solid #ededed;
+    position: absolute;
+    background: #fff;
+    z-index: 2;
+    top: 30%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+}
+.timeline-box:nth-child(2n):before {
+    left: -10.5px;
+}
+.timeline-box:nth-child(2n + 1):before {
+    right: -10.5px;
+}
+.timeline-box:hover:before {
+    border: 5px solid #ffa200;
+}
+@media screen and (max-width: 1199px) {
+    .year {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .history-wrapper {
+        padding: 30px 0 30px;
+    }
+    .history-wrapper .title-wrap {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .title-wrap.one-of-two {
+        width: 100%;
+    }
+    .history-wrapper:after {
+        left: 0;
+    }
+    .history-wrapper .timeline-box:nth-child(2n) {
+        padding: 0 0 0 140px;
+    }
+    .history-wrapper .timeline-box:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .timeline-box.one-of-two,
+    .timeline-box .img img {
+        width: 100%;
+    }
+    .history-wrapper .timeline-box:nth-child(2n + 1) {
+        margin-top: 0;
+        text-align: left;
+    }
+    .timeline-box:nth-child(2n + 1) .year {
+        left: 32px;
+    }
+    .timeline-box:nth-child(2n + 1):before {
+        left: -10.5px;
+    }
+    .timeline-box:nth-child(2n + 1) .year:before {
+        left: -8px;
+        transform: rotate(45deg);
+    }
+    .timeline-box:nth-child(2n + 1):after {
+        left: -1.5px;
+    }
+    .history-wrapper .timeline-box:nth-child(2n + 1) {
+        margin-top: 0;
+        text-align: left;
+    }
+    .timeline-box:nth-child(2n + 1) {
+        padding: 0 0 0 140px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .history-wrapper:after,
+    .year,
+    .timeline-box:before {
+        display: none;
+    }
+    .history-wrapper {
+        padding: 0;
+    }
+    .history-wrapper .timeline-box:nth-child(2n),
+    .history-wrapper .timeline-box:nth-child(2n + 1) {
+        padding: 0 15px;
+    }
+    .history-wrapper .timeline-box:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .timeline-box .content {
+        text-align: center;
+    }
+    .timeline-box:nth-child(2n):after,
+    .timeline-box:nth-child(2n + 1):after {
+        display: none;
+    }
+}
+
+.mb-1-6, .my-1-6 {
+    margin-bottom: 1.6rem;
+}
+    </style>
+</head>
+
+<body>
+<section>
+<div class="container">
+<div class="section-heading wow fadeIn">
+<h2>Pertussis Timeline</h2>
+<p>Major milestones in our history of interactions with <i>Bordetella pertussis</i>, the causative agent of <b>Whooping Cough</b>. <br /> This timeline was produced as <a href="https://www.cmi-pb.org/blog/access-teaching-materials/" target="_blank">educational material</a> for the <a href="https://www.cmi-pb.org" target="_blank">CMI-PB project</a>.<br /><br /></p>
+<div class="heading-separator"></div>
+</div>
+
+<div class="row">
+<div class="history-wrapper">
+
+<div class="title-wrap text-center one-of-two">
+<h2 class="h1 text-secondary mb-0 text-uppercase">CMI-PB</h2>
+<p class="fs-3 font-weight-500">www.cmi-pb.org</p>
+</div>
+
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/bailou_portrait.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">First Epidemic Reported</h3>
+<p class="mb-0">The oldest known pertussis epidemic is thought to be the Paris outbreak of 1578. This was documented in detail by the French physician Guillaume de Baillou who described the classic symptoms of the disease.</p>
+
+<a tabindex="0" class="btn btn-link" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-html="true" data-bs-title="500 years of Pertussis" data-bs-content="Several earlier epidemics that shared features of pertussis have been reported in the historical record. These include multiple outbreaks in 15th century Persia, Korea and China. However, these were not reported in sufficient detail as to be unequivocally assigned to Pertussis.</br></br>
+
+<div>Indeed, diseases with the classic symptoms of Pertussis are absent in reports from Greek and Roman physicians. Results from molecular studies have confirmed that although the causative bacteria, <i>B pertussis</i>, is more than several million years old, it rapidly expanded within the human population in the past 500 years when it likely became endemic.">Read more</a>
+
+</div>
+<div class="year">1578</div>
+</div>
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/cough.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">The Name "Pertussis" First Appears</h3>
+<p class="mb-0">The name pertussis (from Latin for "intensive cough") was first introduced by the English physician Thomas Sydenham in 1670. This name took over by the end of the decade. Earlier names included hooping cough, tusis perennis, tussis epidemica infantum, and tusis quinta.
+</p>
+
+<a tabindex="0" class="btn btn-link" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="What is in name" data-bs-html="true" data-bs-content="Pertussis is more commonly known today as '<b>whooping cough</b>' due to the distinctive, high-pitched 'whoop' sound made when gasping for breath after a characteristic coughing fit. </br></br>
+
+However, over the years pertussis had several different names including: 
+
+<ul>
+    <li>The <b>Kink</b> or <b>Kinkhoest</b>: These are old Scotish and Dutch terms refering to a 'spasmodic cough'.</li>
+    <li><b>Coqueluche</b>, <b>Tusse Convulsa</b> or <b>Tos Ferina</b>: These are French, Spanish and Italian names respectively, referring to the convulsive or ferine (wild, feral) nature of the cough.</li>
+    <li><b>Hundred Day Cough</b>: This name, that is still common in many parts of Asia, comes from the observation that the cough can last up to 100 days or more.</li>
+</ul>
+">Read more</a>
+
+</div>
+<div class="year">1679</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/pertussis_small.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Discovery of Bordetella pertussis</h3>
+<p class="mb-0">In 1900, Jules Bordet along with Octave Gengou observed a small ovoid bacterium in the sputum of a 5-month old child suffering from pertussis. However, the discovery remained questionable, as the organism was unable to be isolated and cultivated on ordinary ascitic agar or blood agar plates.</p>
+</div>
+<div class="year">1900</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/pertussis.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Causative Bacteria Isolated</h3>
+<p class="mb-0">Six years later, Bordet and Gengou succeeded in making a special medium, called Bordet-Gengou (BG) medium, which proved to be key for isolating the bacteria for the first time. It was eventually named <i>Bordetella pertussis</i> in honor of Bordet.</p>
+</div>
+<div class="year">1906</div>
+</div>
+
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/poster_1927.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Pre-vaccine Era</h3>
+<p class="mb-0">In early 1920s and 1930s pertussis was one of the most common childhood diseases and a major cause of childhood mortality. In the U.S. alone there were often over 250,000 cases per year and up to 9,000 deaths. </p>
+</div>
+<div class="year">1921</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/old_vaccine.jpg" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">First US Vaccine Developed</h3>
+<p class="mb-0">Dr. Louis S. Sauer developed an early pertussis vaccine made from killed whole-cell <i>B. pertussis</i> at Evanstion Hospital, a suburb of Chicago. Dr. Sauer never asked for compensation for developing vaccines and told an interviewer later, "One doesn't do that thing for money."</p>
+</div>
+<div class="year">1931</div>
+</div>
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/vaccine_trial_early.jpeg" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">First Whole-cell Pertussis Vaccine Tested on a Wide Scale</h3>
+<p class="mb-0">Danish physician Thorvald Madsen tested a whole-cell pertussis vaccine on a wide scale for the first time reporting promising results. </p>
+</div>
+<div class="year">1935</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/kendrick.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">First DPT Vaccine</h3>
+<p class="mb-0">Pearl Kendrick at the Michigan Department of Health combined a refined whole-cell pertussis vaccine with Diphtheria and Tetanus toxoids to create the first combination DPT vaccine. </p>
+</div>
+<div class="year">1942</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/vaccine.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Routine Vaccination</h3>
+<p class="mb-0">In 1944, the Committee on Infectious Diseases of the American Academy of Pediatrics suggests routine use of pertussis vaccine and, in 1947, recommends its use in the form of the DPT combination. Routine childhood vaccination begins and is made made compulsory in some states by the end of the decade.</p>
+</div>
+<div class="year">1947</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/cdc_plot.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Decline of Whooping Cough</h3>
+<p class="mb-0">There was a massive decline of pertussis cases in the U.S and other countries with mass vaccination programs. In the U.S cases fall by over 99%. </p>
+</div>
+<div class="year">1970</div>
+</div>
+
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/brain.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Controversy</h3>
+<p class="mb-0">In the 1970s and 1980s there was a lot of controversy towards the DPT vaccine relating to the question of whether or not it caused potential brain damage. </p>
+</div>
+<div class="year">1975</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/lawcort.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Lawsuits</h3>
+<p class="mb-0">Due to lawsuits of the unscientific claims about the DPT vaccine in the 1980's, it led to many manufacturers to stop making the vaccine. </p>
+</div>
+<div class="year">1980</div>
+</div>
+
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/wp_ap.jpg" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Creation of DTaP Vaccine</h3>
+<p class="mb-0">Japanese scientist Yugi Sato created an acellular pertussis vaccine that contained purified haemagglutinins from <i>B. Pertussis</i>. This <b>aP vaccine</b> was first used in Japan soon after and was demonstrated to have fewer side effects than the whole-cell (<b>wP</b>) vaccine. It was later used in other countries (with additional components of <i>B. Pertussis</i>) as the combined DTaP vaccine. </p>
+
+<a tabindex="0" class="btn btn-link" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="A new safer vaccine" data-bs-html="true" data-bs-content="Acellular pertussis vaccines were first developed in Japan in the early 1980s. This was in direct response to public concern about the safety of the older whole-cell pertussis vaccine. As discussed below the new DTaP vaccine became widely adopted in many countries in the 1990s after it was demonstrated to have fewer side effects compared to the older DTP vaccine. Indeed it is now the standard for infant immunization against diphtheria, tetanus, and pertussis in many parts of the world.
+">Read more</a>
+
+</div>
+<div class="year">1981</div>
+</div>
+
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/vacine_roulette_tv.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">"DPT: Vaccine Roulette"</h3>
+<p class="mb-0">In 1982 negative publicity was encouraged from a documentary called "DPT: Vaccine Roulette", which led to a massive amount of lawsuits against the vaccine manufacturers. This documentary depicted the lives of children whose severe disabilities were <b>incorrectly</b> blamed on the DPT vaccine.</p>
+
+<a tabindex="0" class="btn btn-link" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Side Effect Controversy" data-bs-html="true" data-bs-content="DPT: Vaccine Roulette was a controversial television documentary that aired on April 19, 1982. It focused on the side effects of the DPT vaccine and showcased families who believed their children had severe neurological side effects. Later shown to be unlinked to vaccination. </br></br>
+
+However, the documentary had significant consequences. It triggered concern and fear about the DPT vaccine among parents, leading to some opting out of vaccinations. It also helped spawn the modern anti-vaccine movement and was directly responsible for the creation of the advocacy group Dissatisfied Parents Together (which later became the National Vaccine Information Center), one of the first organized groups promoting vaccine skepticism.</br></br>
+
+Critically, extensive research has repeatedly confirmed the overall safety and importance of the DPT vaccine and its later version, DTaP, that has fewer side effects. These vaccines have saved countless lives and potential side effects are carefully monitored and studied by healthcare professionals and researchers.
+">Read more</a>
+
+</div>
+<div class="year">1982</div>
+</div>
+
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/insurence.jpg" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Liability</h3>
+<p class="mb-0">By 1984 DPT vaccine manufacturers had a hard time obtaining liability insurance. By the end of the year, only one DPT manufacturer remained. Scientists respond by ramping up development and testing of safer new acellular pertussis vaccines. These would replace the older whole cell vaccine in many countries with a decade.  </p>
+</div>
+<div class="year">1984</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/mythsvsfacts.jpg" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Pertussis On The Rise Again</h3>
+<p class="mb-0">Pertussis cases in the U.S. started to increase steadily as vaccine uptake declines. Misinformation and vaccine hesitancy pose serious treats to pubic health. </p>
+</div>
+<div class="year">1985</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/ncia_act.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">National Childhood Vaccine Injury Act</h3>
+<p class="mb-0">In 1986 Congress passed the National Childhood Vaccine Injury Act (NCVIA). In hopes to avert the vaccine crisis. It was made to establish a federal no-fault system to compensate to those hurt by the vaccine. </p>
+</div>
+<div class="year">1986</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/nonsense.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">"Myth" and "Nonsense"</h3>
+<p class="mb-0">Later studies showed that their was no connection between the DPT vaccine and the permanent brain damage. It was in fact called a "Myth" and "Nonsence" by the Journal of American Medical Association in 1990. </p>
+</div>
+<div class="year">1990</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/DTaP.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">aP Vaccine Approved in the U.S.</h3>
+<p class="mb-0">The acellular pertussis (aP) vaccine was approved in the U.S in 1992, the the older wP formalization was phased out and completely replaced with the DTaP vaccine combination in 1996. </p>
+</div>
+<div class="year">1992</div>
+</div>
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="img/graph_rise.png" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">Pertussis Outbreaks</h3>
+<p class="mb-0">Major pertussis epidemics and outbreaks are once again a major public health concern. With epidemics typically occurring every 3 to 5 years in the U.S. as was evident in the pre-vaccine years.  TO FINISH mention CA outbreak.</p>
+</div>
+<div class="year">2010</div>
+</div>
+
+
+
+<div class="timeline-box one-of-two">
+<img class="mb-1-6 rounded" src="https://www.cmi-pb.org/static/img/CMIPB.jpg" alt="...">
+<div class="content">
+<h3 class="h4 mb-2 mb-md-3">CMI-PB Project</h3>
+<p class="mb-0">A new <a href="https://www.cmi-pb.org" target="_blank">systems vaccinology project</a> is launced that combines systems biology and genomics to provide a more holistic picture of protective pertussis-specific immune mechanisms. The project provides the scientific community with comprehensive, high-quality, and freely accessible resources related to Pertussis booster vaccination.<br /><br />These resources, and associated <a href="https://www.cmi-pb.org/blog/prediction-challenge-overview/" target="_blank">prediction challenges</a>, are geared towards engaging both experts and enthusiasts in developing and improving <b>computational models</b> of the immune response to vaccination and in turn informing new intervention strategies to curb the increasing frequency of <i>B. pertussis</i> infection.
+</p>
+</div>
+<div class="year">2020</div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>
