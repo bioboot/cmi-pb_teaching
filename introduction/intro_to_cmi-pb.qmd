@@ -490,48 +490,50 @@ table(abdata$isotype)
 ```
 :::
 
-- **Q12.** What do you notice about the number of visit 8 specimens compared to other visits?
+- **Q12.** What are the different `$dataset` values in `abdata` and what do you notice about the number of rows for the most "recent" dataset? 
 
 ::: {.callout-tip collapse="true"} 
 ### Hint
 
-You can again use `table()` this time on the the `visit` column to help answer this question.
+You can again use `table()` this time on the the `dataset` column to help answer this question.
 
 :::
 
 `r question_end()`
 
 
-# 4. Examine IgG1 Ab titer levels
+# 4. Examine IgG Ab titer levels
 
-Now using our joined/merged/linked `abdata` dataset `filter()` for IgG1 `isotype` and exclude the small number of visit 8 entries.  
+Now using our joined/merged/linked `abdata` dataset `filter()` for IgG `isotype`.  
 
 ```{r}
-ig1 <- abdata %>% filter(isotype == "IgG1", visit!=8)
-head(ig1)
+igg <- abdata %>% filter(isotype == "IgG")
+head(igg)
 ```
 
 `r question_start()`
 - **Q13.** Complete the following code to make a summary boxplot of Ab titer levels (MFI) for all antigens: 
 
 ```{r eval=FALSE}
-ggplot(ig1) +
+ggplot(igg) +
   aes(___, antigen) +
   geom____() + 
+    xlim(0,75) +
   facet_wrap(vars(visit), nrow=2)
 ```
 
 
-```{r echo=FALSE}
-ggplot(ig1) +
-  aes(MFI, antigen) +
+```{r echo=FALSE, warning=FALSE}
+ggplot(igg) +
+  aes(MFI_normalised, antigen) +
   geom_boxplot() + 
+  xlim(0,75) +
   facet_wrap(vars(visit), nrow=2)
 
 ```
    
 
-- **Q14.** What antigens show differences in the level of IgG1 antibody titers recognizing them over time? Why these and not others? 
+- **Q14.** What antigens show differences in the level of IgG antibody titers recognizing them over time? Why these and not others? 
 
 ::: {.callout-tip collapse="true"} 
 ### Hint
@@ -543,11 +545,12 @@ You can use the CMI-PB website search functionality and *Terminology Browser* (u
 
 We can attempt to examine differences between wP and aP here by setting color and/or facet values of the plot to include `infancy_vac` status (see below). However these plots tend to be rather busy and thus hard to interpret easily. 
 
-```{r}
-ggplot(ig1) +
-  aes(MFI, antigen, col=infancy_vac ) +
+```{r warning=FALSE}
+ggplot(igg) +
+  aes(MFI_normalised, antigen, col=infancy_vac ) +
   geom_boxplot(show.legend = FALSE) + 
   facet_wrap(vars(visit), nrow=2) +
+  xlim(0,75) +
   theme_bw()
 
 ```
@@ -555,9 +558,11 @@ ggplot(ig1) +
 Another version of this plot adding `infancy_vac` to the faceting:
 
 ```{r}
-ggplot(ig1) +
-  aes(MFI, antigen, col=infancy_vac ) +
+igg %>% filter(visit != 8) %>%
+ggplot() +
+  aes(MFI_normalised, antigen, col=infancy_vac ) +
   geom_boxplot(show.legend = FALSE) + 
+  xlim(0,75) +
   facet_wrap(vars(infancy_vac, visit), nrow=2)
 
 ```
@@ -566,13 +571,13 @@ ggplot(ig1) +
 
 
 `r question_start()`
-- **Q15.** Filter to pull out only two specific antigens for analysis and create a boxplot for each. You can chose any you like. Below I picked a "control" antigen (**"Measles"**, that is not in our vaccines) and a clear antigen of interest (**"FIM2/3"**, extra-cellular fimbriae proteins from *B. pertussis* that participate in substrate attachment). 
+- **Q15.** Filter to pull out only two specific antigens for analysis and create a boxplot for each. You can chose any you like. Below I picked a "control" antigen (**"OVA"**, that is not in our vaccines) and a clear antigen of interest (**"PT"**, Pertussis Toxin, one of the key virulence factors produced by the bacterium *B. pertussis*).  
 
 
 ```{r eval=FALSE}
-filter(ig1, antigen=="Measles") %>%
+filter(igg, antigen=="OVA") %>%
   ggplot() +
-  aes(MFI, col=infancy_vac) +
+  aes(MFI____, col=infancy_vac) +
   geom_boxplot(show.legend = ___) +
   facet_wrap(vars(visit)) +
   theme_bw()
@@ -580,12 +585,12 @@ filter(ig1, antigen=="Measles") %>%
 
 
 ```{r echo=FALSE}
-filter(ig1, antigen=="Measles") %>%
+filter(igg, antigen=="OVA") %>%
   ggplot() +
-  aes(MFI, col=infancy_vac) +
+  aes(MFI_normalised, col=infancy_vac) +
   geom_boxplot(show.legend = FALSE) +
   facet_wrap(vars(visit)) +
-  labs(title="Measles antigen levels per visit (aP red, wP teal)") +
+  labs(title="OVA antigen levels per visit (aP red, wP teal)") +
   theme_bw() +
   theme(axis.text.y=element_blank(),
         axis.ticks.y=element_blank()) 
@@ -595,21 +600,21 @@ filter(ig1, antigen=="Measles") %>%
 and the same for `antigen=="FIM2/3"` 
 
 ```{r eval=FALSE}
-filter(ig1, antigen==___) %>%
+filter(igg, antigen==___) %>%
   ggplot() +
-  aes(MFI, col=infancy_vac) +
+  aes(MFI_normalised, col=infancy_vac) +
   geom_boxplot(show.legend = ___) +
   facet_wrap(vars(visit)) +
   theme_bw()
 ```
 
 ```{r echo=FALSE}
-filter(ig1, antigen=="FIM2/3") %>%
+filter(igg, antigen=="PT") %>% 
   ggplot() +
-  aes(MFI, col=infancy_vac) +
+  aes(MFI_normalised, col=infancy_vac) +
   geom_boxplot(show.legend = FALSE) +
   facet_wrap(vars(visit)) +
-  labs(title="FIM2/3 antigen levels per visit (aP red, wP teal)") +
+  labs(title="PT antigen levels per visit (aP red, wP teal)") +
   theme_bw() +
   theme(axis.text.y=element_blank(),
         axis.ticks.y=element_blank()) 
@@ -617,16 +622,44 @@ filter(ig1, antigen=="FIM2/3") %>%
 ```
   
 
-- **Q16.** What do you notice about these two antigens time courses and the FIM2/3 data in particular?
+- **Q16.** What do you notice about these two antigens time courses and the PT data in particular?
 
 ::: {.callout-tip collapse="true"} 
 ### Hint
 
-FIM2/3 levels clearly rise over time and far exceed those of Measles. They also appear to peak at visit 5 and then decline. This trend appears similar for for wP and aP subjects.
+PT levels clearly rise over time and far exceed those of OVA. They also appear to peak at visit 5 and then decline. This trend appears similar for wP and aP subjects.
 :::
 
 - **Q17.** Do you see any clear difference in aP vs. wP responses? 
 `r question_end()`
+
+Lets finish this section by looking at the 2021 dataset IgG PT antigen levels time-course:
+
+```{r}
+abdata.21 <- abdata %>% filter(dataset == "2021_dataset")
+
+abdata.21 %>% 
+  filter(isotype == "IgG",  antigen == "PT") %>%
+  ggplot() +
+    aes(x=planned_day_relative_to_boost,
+        y=MFI_normalised,
+        col=infancy_vac,
+        group=subject_id) +
+    geom_point() +
+    geom_line() +
+    geom_vline(xintercept=0, linetype="dashed") +
+    geom_vline(xintercept=14, linetype="dashed") +
+  labs(title="2021 dataset IgG PT",
+       subtitle = "Dashed lines indicate day 0 (pre-boost) and 14 (apparent peak levels)")
+
+```
+
+`r question_start()`
+- **Q18.** Does this trend look similar for the 2020 dataset?  
+`r question_end()`
+
+
+
 
 
 # 5. Obtaining CMI-PB RNASeq data
@@ -658,7 +691,7 @@ ssrna <- inner_join(rna, meta)
 ```
 
 `r question_start()`
-- **Q18.** Make a plot of the time course of gene expression for IGHG1 gene (i.e. a plot of `visit` vs. `tpm`).
+- **Q19.** Make a plot of the time course of gene expression for IGHG1 gene (i.e. a plot of `visit` vs. `tpm`).
 
 ```{r eval=FALSE}
 ggplot(ssrna) +
@@ -675,9 +708,9 @@ ggplot(ssrna) +
 ```
 
 
-- **Q19.**: What do you notice about the expression of this gene (i.e. when is it at it's maximum level)?
+- **Q20.**: What do you notice about the expression of this gene (i.e. when is it at it's maximum level)?
 
-- **Q20.** Does this pattern in time match the trend of antibody titer data? If not, why not? 
+- **Q21.** Does this pattern in time match the trend of antibody titer data? If not, why not? 
 
 ::: {.callout-tip collapse="true"} 
 ### Hint
